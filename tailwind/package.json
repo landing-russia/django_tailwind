@@ -1,0 +1,25 @@
+{
+	"name": "tw-v2",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tailwindcss build ./src/css/tailwind.css -o ../static/style.css",
+		"prod": "cross-env NODE_ENV=production postcss build ./src/css/tailwind.css -o ../static/style.css",
+		"watch": "onchange \"tailwind.config.js\" \"src/**/*.css\" -- npm run build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"autoprefixer": "^10.2.1",
+		"cssnano": "^4.1.10",
+		"onchange": "^7.1.0",
+		"postcss": "^8.2.3",
+		"postcss-cli": "^8.3.1",
+		"tailwindcss": "^2.0.2"
+	},
+	"devDependencies": {
+		"cross-env": "^7.0.3"
+	}
+}
